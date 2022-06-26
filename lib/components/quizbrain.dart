@@ -3,6 +3,7 @@ import 'question.dart';
 class QuizBrain {
   int _questionNumber = 0;
 
+  //List<dynamic>? _questionBank;
   List<dynamic> _questionBank = [
     MultipleChoiceSingleAnswer(
         'Point A is located on a number line. If point A is between x and y, which are values on the same number, and if 0<x<y, which of the following could represent the position of point A on the number line? ',
@@ -62,3 +63,15 @@ class QuizBrain {
     _questionNumber = 0;
   }
 }
+
+//   Future<List<MultipleChoiceSingleAnswer>> ReadJsonData() aync {
+//     //read the json file
+//     final jsonData = await rootBundle.loadString('../data/questions.json');
+//
+//     //decode the json file
+//     final list = json.decode(jsonData) as List<dynamic>;
+//
+//     //map json & initialise using the data model
+//     return list.map((e) => MultipleChoiceSingleAnswer.fromJson(e)).toList();
+// }
+// }

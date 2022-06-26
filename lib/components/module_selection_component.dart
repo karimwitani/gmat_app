@@ -22,8 +22,19 @@ class StudyModule extends StatelessWidget {
         height: 100,
         width: 300,
         color: Colors.blue,
-        child: Center(
-          child: Text(sectionName),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Text(this.sectionName),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Text('10/50 Questions'),
+                Text('Mastery'),
+              ],
+            ),
+          ],
         ),
       ),
     );
